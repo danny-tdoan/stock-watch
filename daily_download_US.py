@@ -69,7 +69,23 @@ def download_all_tickers(market='ASX',sd=startdate,ed=enddate):
 
         download_tickers(tickers,sd,ed)
         return tickers
+    elif market=='US':
+        #new style of naming variable
+        amx_tickers = ur.urlopen(AMEX_TICKER_LIST).read().decode()
+        nasdaq_tickers = ur.urlopen(NASDAQ_TICKER_LIST).read().decode()
+        nyse_tickers = ur.urlopen(NYSE_TICKER_LIST).read().decode()
 
+        data=amx_tickers.split('\r\n')[1:]+nasdaq_tickers.split('\r\n')[1:]+nyse_tickers.split('\r\n')[1:]
+        all_tickers=[]
+
+        f='data/StockList/US.txt'
+        fh_write=open(f,'w')
+        for line in data:
+            all_tickers.append(line.split(',')[0].strip('"').strip())
+            fh_write.write(line.split(',')[0].strip('"').strip()+'\n')
+        fh_write.close()
+
+        return all_tickers
 
 
 #check the number of arguments
@@ -86,4 +102,4 @@ print(enddate)
 #sd=datetime.date(2015,1,21)
 #ed=datetime.date(2016,3,23)
 #download_ticker(ticker,sd,ed)
-download_all_tickers('ASX',startdate,enddate)
+download_all_tickers('US',startdate,enddate)
