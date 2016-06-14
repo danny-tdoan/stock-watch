@@ -1,0 +1,1 @@
+['ALQ.AX', 'AWC.AX', 'ANN.AX', 'ASZ.AX', 'BOQ.AX', 'BSL.AX', 'BKN.AX', 'BAP.AX', 'CPU.AX', 'HFR.AX', 'IRE.AX', 'MQG.AX', 'MFG.AX', 'MYX.AX', 'MSB.AX', 'MYO.AX', 'NUF.AX', 'PPT.AX', 'PRG.AX', 'RMD.AX', 'SFR.AX', 'SHV.AX', 'S32.AX', 'TAH.AX', 'TEN.AX', 'TFC.AX', 'TGA.AX', 'VLW.AX', 'VRT.AX', 'VOC.AX']

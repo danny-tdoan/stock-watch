@@ -1,0 +1,1 @@
+['ALQ.AX', 'ALU.AX', 'AZJ.AX', 'BKN.AX', 'HSN.AX', 'INA.AX', 'NWS.AX', 'NHF.AX', 'SCP.AX', 'SKT.AX', 'SMX.AX', 'SPK.AX', 'SMN.AX', 'TAH.AX', 'WOR.AX']

@@ -1,0 +1,1 @@
+['AGI.AX', 'APO.AX', 'AJA.AX', 'AHG.AX', 'AOG.AX', 'BAL.AX', 'BBG.AX', 'BKL.AX', 'BAP.AX', 'BWP.AX', 'GPT.AX', 'GOZ.AX', 'NTC.AX', 'NWS.AX', 'OML.AX', 'QAN.AX', 'SCG.AX', 'SHV.AX', 'SHL.AX', 'SUL.AX', 'SLC.AX', 'SRF.AX', 'SYD.AX', 'VRT.AX', 'WAM.AX', 'WES.AX']

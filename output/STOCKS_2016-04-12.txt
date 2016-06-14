@@ -1,0 +1,1 @@
+['AQG.AX', 'AZJ.AX', 'CGF.AX', 'CTD.AX', 'FMG.AX', 'IGO.AX', 'NAN.AX', 'NCM.AX', 'OGC.AX', 'OSH.AX', 'RRL.AX', 'RFG.AX', 'RIO.AX', 'STO.AX', 'SAR.AX', 'SBM.AX', 'SYR.AX', 'WSA.AX']

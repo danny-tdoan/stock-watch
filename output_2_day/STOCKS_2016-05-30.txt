@@ -1,0 +1,1 @@
+['3PL.AX', 'ACX.AX', 'ADA.AX', 'ALQ.AX', 'AWC.AX', 'APZ.AX', 'ANZ.AX', 'BSL.AX', 'BKN.AX', 'DOW.AX', 'DLX.AX', 'EML.AX', 'FMG.AX', 'HFR.AX', 'ILU.AX', 'KAR.AX', 'LOV.AX', 'MYX.AX', 'MPL.AX', 'MTS.AX', 'MYO.AX', 'NHF.AX', 'NUF.AX', 'OSH.AX', 'PPT.AX', 'RIC.AX', 'SFR.AX', 'STO.AX', 'TAH.AX', 'TME.AX', 'UGL.AX', 'WEB.AX', 'WSA.AX', 'WBC.AX', 'WPL.AX', 'WOR.AX']

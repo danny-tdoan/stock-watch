@@ -1,0 +1,1 @@
+['AHY.AX', 'DUE.AX', 'FXL.AX', 'JBH.AX', 'LOV.AX', 'QAN.AX', 'RCR.AX', 'REA.AX', 'RKN.AX', 'SIQ.AX', 'TOX.AX']

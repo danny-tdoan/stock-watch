@@ -1,0 +1,21 @@
+Checking ticker 1PG.AX
+Traceback (most recent call last):
+  File "check_signal.py", line 146, in <module>
+    print(check_signal())
+  File "check_signal.py", line 94, in check_signal
+    if check_indicator(ticker):
+  File "check_signal.py", line 41, in check_indicator
+    tickerData=mlab.csv2rec(f)
+  File "/usr/lib/python3/dist-packages/matplotlib/mlab.py", line 2163, in csv2rec
+    rows.append([func(name, val) for func, name, val in zip(converters, names, row)])
+  File "/usr/lib/python3/dist-packages/matplotlib/mlab.py", line 2163, in <listcomp>
+    rows.append([func(name, val) for func, name, val in zip(converters, names, row)])
+  File "/usr/lib/python3/dist-packages/matplotlib/mlab.py", line 2031, in newfunc
+    return func(val)
+  File "/usr/lib/python3/dist-packages/matplotlib/mlab.py", line 2049, in mydate
+    d = dateparser(x, dayfirst=dayfirst, yearfirst=yearfirst)
+  File "/usr/lib/python3/dist-packages/dateutil/parser.py", line 698, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/usr/lib/python3/dist-packages/dateutil/parser.py", line 311, in parse
+    ret = default.replace(**repl)
+ValueError: day is out of range for month

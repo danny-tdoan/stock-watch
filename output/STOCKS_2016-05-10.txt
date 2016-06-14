@@ -1,0 +1,1 @@
+['ACX.AX', 'BKL.AX', 'BLD.AX', 'BKW.AX', 'ECX.AX', 'EPX.AX', 'FPH.AX', 'GXL.AX', 'HSN.AX', 'MQA.AX', 'MTR.AX', 'MYR.AX', 'NCM.AX', 'NEC.AX', 'NST.AX', 'OGC.AX', 'OML.AX', 'PBG.AX', 'REA.AX', 'RKN.AX', 'RMD.AX', 'SPK.AX', 'TOX.AX', 'TPM.AX', 'VRT.AX']

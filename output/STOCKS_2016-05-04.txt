@@ -1,0 +1,1 @@
+['ABC.AX', 'AGL.AX', 'AYS.AX', 'AAD.AX', 'BGA.AX', 'BKL.AX', 'BXB.AX', 'BKW.AX', 'BRS.AX', 'BAP.AX', 'CTX.AX', 'CAR.AX', 'CKF.AX', 'DLX.AX', 'GEM.AX', 'GPT.AX', 'GXL.AX', 'IOF.AX', 'IVC.AX', 'JHC.AX', 'JBH.AX', 'LOV.AX', 'MTR.AX', 'MLX.AX', 'MTS.AX', 'MND.AX', 'NEC.AX', 'NST.AX', 'PGH.AX', 'REA.AX', 'RIC.AX', 'SAI.AX', 'SEK.AX', 'SIQ.AX', 'SYD.AX', 'TPM.AX']

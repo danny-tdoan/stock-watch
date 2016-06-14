@@ -1,0 +1,1 @@
+['EHE.AX', 'FXL.AX']

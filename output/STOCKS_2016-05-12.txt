@@ -1,0 +1,1 @@
+['TIX.AX', 'ADH.AX', 'AGI.AX', 'APO.AX', 'ALL.AX', 'BBG.AX', 'BKL.AX', 'CNU.AX', 'CCL.AX', 'ECX.AX', 'EPX.AX', 'FPH.AX', 'FXL.AX', 'GFY.AX', 'GMF.AX', 'GWA.AX', 'JHX.AX', 'LLC.AX', 'LHC.AX', 'MTR.AX', 'MYR.AX', 'NAN.AX', 'ORA.AX', 'PBG.AX', 'QAN.AX', 'RKN.AX', 'SRX.AX', 'SMX.AX', 'TAH.AX', 'TFC.AX', 'A2M.AX', 'TPM.AX']

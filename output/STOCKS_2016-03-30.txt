@@ -1,0 +1,1 @@
+['ALU.AX', 'ARF.AX', 'AIO.AX', 'APZ.AX', 'ASB.AX', 'AOG.AX', 'CTX.AX', 'CQR.AX', 'EGG.AX', 'GPT.AX', 'GMF.AX', 'GXL.AX', 'IMF.AX', 'MGR.AX', 'NWS.AX', 'NXT.AX', 'NCK.AX', 'PRO.AX', 'QMS.AX', 'QUB.AX', 'SCP.AX', 'SDA.AX', 'SMN.AX']

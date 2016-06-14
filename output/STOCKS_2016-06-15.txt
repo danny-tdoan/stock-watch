@@ -1,0 +1,1 @@
+['ADH.AX', 'AGI.AX', 'AST.AX', 'CDA.AX', 'EVN.AX', 'INA.AX', 'MLX.AX', 'NAN.AX', 'NCM.AX', 'NST.AX', 'OGC.AX', 'RRL.AX', 'SAR.AX', 'SUL.AX', 'A2M.AX', 'WFD.AX']

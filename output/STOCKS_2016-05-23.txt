@@ -1,0 +1,1 @@
+['CBA.AX', 'CPU.AX', 'CVO.AX', 'CSV.AX', 'ISD.AX', 'MQG.AX', 'RMD.AX', 'SIP.AX', 'TGA.AX']

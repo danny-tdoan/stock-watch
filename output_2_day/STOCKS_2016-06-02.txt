@@ -1,0 +1,1 @@
+['ASZ.AX', 'AJD.AX', 'CMW.AX', 'ELD.AX', 'E88.AX', 'GBT.AX', 'GTK.AX', 'IDR.AX', 'JHX.AX', 'KMD.AX', 'NHF.AX', 'RCR.AX', 'SKT.AX', 'SMN.AX', 'TAH.AX', 'UGL.AX', 'VTG.AX', 'WFD.AX', 'WOR.AX']

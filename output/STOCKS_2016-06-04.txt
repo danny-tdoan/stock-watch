@@ -1,0 +1,1 @@
+['ALU.AX', 'AIO.AX', 'ASX.AX', 'BSL.AX', 'EML.AX', 'HSN.AX', 'HFR.AX', 'ISU.AX', 'MLD.AX', 'MPL.AX', 'MLB.AX', 'MGR.AX', 'MYS.AX', 'NHF.AX', 'SCP.AX', 'SKT.AX', 'SMX.AX', 'SKI.AX', 'SPK.AX', 'WOR.AX']

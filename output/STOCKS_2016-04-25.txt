@@ -1,0 +1,1 @@
+['AQG.AX', 'AMP.AX', 'ARF.AX', 'ANZ.AX', 'BEN.AX', 'CAB.AX', 'CDD.AX', 'CKF.AX', 'CPU.AX', 'DXS.AX', 'HFR.AX', 'ISU.AX', 'KAR.AX', 'LIC.AX', 'MSB.AX', 'NAB.AX', 'NMG.AX', 'OSH.AX', 'QBE.AX', 'RIC.AX', 'SRV.AX', 'SGF.AX', 'SHL.AX', 'SXL.AX', 'SPO.AX', 'SUN.AX', 'SYR.AX', 'TGA.AX', 'WEB.AX', 'WBC.AX']

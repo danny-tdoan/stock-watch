@@ -1,0 +1,1 @@
+['1PG.AX', 'CNU.AX', 'CMW.AX', 'DWS.AX', 'GPT.AX', 'GXL.AX', 'MGR.AX', 'NXT.AX', 'NCK.AX', 'QMS.AX', 'RRL.AX', 'SAI.AX', 'SCP.AX']

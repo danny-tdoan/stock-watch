@@ -1,0 +1,1 @@
+['AGI.AX', 'AWC.AX', 'AZJ.AX', 'BAP.AX', 'CNU.AX', 'CIM.AX', 'CKF.AX', 'DCN.AX', 'MND.AX', 'RIO.AX', 'SFR.AX', 'SLC.AX', 'SYR.AX', 'A2M.AX', 'WAX.AX']

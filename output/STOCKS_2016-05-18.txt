@@ -1,0 +1,1 @@
+['APO.AX', 'CBA.AX', 'DUE.AX', 'EVN.AX', 'FPH.AX', 'GWA.AX', 'IGO.AX', 'MFG.AX', 'MTR.AX', 'PRY.AX', 'PRG.AX', 'REG.AX', 'SXL.AX', 'SUN.AX', 'SYD.AX', 'TTS.AX', 'TNE.AX', 'SGR.AX', 'TCL.AX', 'VOC.AX', 'WFD.AX']

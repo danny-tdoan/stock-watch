@@ -1,0 +1,1 @@
+['ASZ.AX', 'BBG.AX', 'CTX.AX', 'CIM.AX', 'IGO.AX', 'IRE.AX', 'KMD.AX', 'MTR.AX', 'MLX.AX', 'OML.AX', 'PEP.AX', 'PRY.AX', 'QMS.AX', 'SKI.AX', 'TEN.AX', 'VOC.AX']

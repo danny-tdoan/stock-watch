@@ -1,0 +1,1 @@
+['ABP.AX', 'AGL.AX', 'ALQ.AX', 'AYS.AX', 'APA.AX', 'AIA.AX', 'AST.AX', 'BAL.AX', 'CTX.AX', 'CNU.AX', 'CDA.AX', 'CLH.AX', 'DUE.AX', 'EVN.AX', 'GUD.AX', 'GEM.AX', 'GOZ.AX', 'MLD.AX', 'MQA.AX', 'MMS.AX', 'MLX.AX', 'NAC.AX', 'NVT.AX', 'NCM.AX', 'RCG.AX', 'SCG.AX', 'SEK.AX', 'SKC.AX', 'SXL.AX', 'SUL.AX', 'TME.AX', 'VCX.AX', 'WSA.AX']

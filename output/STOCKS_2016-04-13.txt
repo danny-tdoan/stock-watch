@@ -1,0 +1,1 @@
+['3PL.AX', 'AQG.AX', 'ALQ.AX', 'APX.AX', 'BEN.AX', 'BHP.AX', 'CPU.AX', 'CTD.AX', 'CSR.AX', 'EVN.AX', 'GUD.AX', 'GXL.AX', 'HGG.AX', 'IGO.AX', 'IFL.AX', 'KMD.AX', 'MIN.AX', 'MYO.AX', 'NHF.AX', 'OGC.AX', 'ORG.AX', 'OZL.AX', 'PRG.AX', 'RRL.AX', 'RFG.AX', 'RIO.AX', 'SYR.AX', 'WSA.AX', 'WOR.AX']
