@@ -105,7 +105,7 @@ def check_rsi(rsi):
         RSI just cross 50
         RSI increasing
     '''
-    return  rsi[-1]<=70 and non_decreasing(rsi[-3:])
+    return  rsi[-1]<=55# and non_decreasing(rsi[-3:])
 
 
 def check_macd(macd,ema9):
@@ -117,7 +117,7 @@ def check_macd(macd,ema9):
     a=vals[-3:]
     a1=macd[-3:]
     a2=ema9[-3:]
-    return non_decreasing(vals[-3:])
+    return non_decreasing(vals[-2:]) and vals[-3]<0
 
 def check_psar(psarVals):
     return True
