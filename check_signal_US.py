@@ -33,10 +33,10 @@ def generate_indicator(ticker):
 
     return [tickerData,ma20,ma200,rsi,macd,ema9]
 
-def check_indicator(ticker):
+def check_indicator_US(ticker,market='US'):
     try:
         #[tickerData,ma20,ma200,rsi,macd,ema9]=generate_indicator(ticker)
-        f='data/'+ticker+'.txt'
+        f='data/'+market+'/'+ticker+'.txt'
 
         tickerData=mlab.csv2rec(f)
         tickerData.sort()
@@ -81,17 +81,14 @@ def check_indicator(ticker):
         #print('Error with ticker '+ticker)
         return False
 
-
-def check_signal():
+def check_signal_US(market='US'):
     #get the list of all tickers
-    tickersFile=mlab.csv2rec('data/StockList/ASX.txt')
-    tickers=tickersFile.asxcode
-    tickers=[x+'.AX' for x in tickers]
+    tickers = open('data/StockList/US.txt').read().split()
 
     finalList=[]
     for ticker in tickers:
         print('Checking ticker ' + ticker)
-        if check_indicator(ticker):
+        if check_indicator_US(ticker,market):
             finalList.append(ticker)
             print(finalList)
     #write to file
@@ -143,4 +140,4 @@ def non_decreasing(L):
 
 
 #print(check_indicator('MTS.AX'))
-print(check_signal())
+print(check_signal_US())
