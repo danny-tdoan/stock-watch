@@ -93,7 +93,7 @@ def check_signal_US(market='US'):
             print(finalList)
     #write to file
     today=datetime.date.today()
-    fp=open('output/STOCKS_'+str(today)+'.txt','w')
+    fp=open('output/'+market+'/STOCKS_'+str(today)+'.txt','w')
     fp.write(str(finalList))
     fp.close()
 
