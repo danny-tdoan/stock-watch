@@ -6,28 +6,29 @@ import datetime
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
 
-def plot(r,ticker):
-    today=datetime.date.today()
-    plt.rc('axes',grid=True)
-    plt.rc('grid',color='0.75',linestyle='-',linewidth=0.5)
 
-    textsize=9
-    left,width=0.1,0.8
-    rect1=[left,0.7,width,0.2]
-    rect2=[left,0.3,width,0.4]
-    rect3=[left,0.1,width,0.2]
+def plot(r, ticker):
+    today = datetime.date.today()
+    plt.rc('axes', grid=True)
+    plt.rc('grid', color='0.75', linestyle='-', linewidth=0.5)
 
-    fig=plt.figure(facecolor='white')
-    axescolor='#f6f6f6'
+    textsize = 9
+    left, width = 0.1, 0.8
+    rect1 = [left, 0.7, width, 0.2]
+    rect2 = [left, 0.3, width, 0.4]
+    rect3 = [left, 0.1, width, 0.2]
 
-    ax1=fig.add_axes(rect1,axisbg=axescolor)
-    ax2=fig.add_axes(rect2,axisbg=axescolor,sharex=ax1)
-    ax2t=ax2.twinx()
-    ax3=fig.add_axes(rect3,axisbg=axescolor,sharex=ax1)
+    fig = plt.figure(facecolor='white')
+    axescolor = '#f6f6f6'
 
-    prices=r.adj_close
-    rsi=ti.relative_strength(prices)
-    fillcolor='darkgoldenrod'
+    ax1 = fig.add_axes(rect1, axisbg=axescolor)
+    ax2 = fig.add_axes(rect2, axisbg=axescolor, sharex=ax1)
+    ax2t = ax2.twinx()
+    ax3 = fig.add_axes(rect3, axisbg=axescolor, sharex=ax1)
+
+    prices = r.adj_close
+    rsi = ti.relative_strength(prices)
+    fillcolor = 'darkgoldenrod'
 
     ax1.plot(r.date, rsi, color=fillcolor)
     ax1.axhline(70, color=fillcolor)
@@ -62,7 +63,7 @@ def plot(r,ticker):
         today.strftime('%d-%b-%Y'),
         last.open, last.high,
         last.low, last.close,
-        last.volume*1e-6,
+        last.volume * 1e-6,
         last.close - last.open)
     t4 = ax2.text(0.3, 0.9, s, transform=ax2.transAxes, fontsize=textsize)
 
@@ -70,13 +71,11 @@ def plot(r,ticker):
     leg = ax2.legend(loc='center left', shadow=True, fancybox=True, prop=props)
     leg.get_frame().set_alpha(0.5)
 
-
-    volume = (r.close*r.volume)/1e6  # dollar volume in millions
+    volume = (r.close * r.volume) / 1e6  # dollar volume in millions
     vmax = volume.max()
     poly = ax2t.fill_between(r.date, volume, 0, label='Volume', facecolor=fillcolor, edgecolor=fillcolor)
-    ax2t.set_ylim(0, 5*vmax)
+    ax2t.set_ylim(0, 5 * vmax)
     ax2t.set_yticks([])
-
 
     # compute the MACD indicator
     fillcolor = 'darkslategrey'
@@ -89,11 +88,10 @@ def plot(r,ticker):
     ax3.plot(r.date, ema9, color='blue', lw=1)
     ax3.fill_between(r.date, macd - ema9, 0, alpha=0.5, facecolor=fillcolor, edgecolor=fillcolor)
 
-
     ax3.text(0.025, 0.95, 'MACD (%d, %d, %d)' % (nfast, nslow, nema), va='top',
              transform=ax3.transAxes, fontsize=textsize)
 
-    #ax3.set_yticks([])
+    # ax3.set_yticks([])
     # turn off upper axis tick labels, rotate the lower ones, etc
     for ax in ax1, ax2, ax2t, ax3:
         if ax != ax3:
@@ -106,7 +104,6 @@ def plot(r,ticker):
 
         ax.fmt_xdata = mdates.DateFormatter('%Y-%m-%d')
 
-
     class MyLocator(mticker.MaxNLocator):
         def __init__(self, *args, **kwargs):
             mticker.MaxNLocator.__init__(self, *args, **kwargs)
@@ -116,11 +113,10 @@ def plot(r,ticker):
 
     # at most 5 ticks, pruning the upper and lower so they don't overlap
     # with other ticks
-    #ax2.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
-    #ax3.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
+    # ax2.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
+    # ax3.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
 
     ax2.yaxis.set_major_locator(MyLocator(5, prune='both'))
     ax3.yaxis.set_major_locator(MyLocator(5, prune='both'))
-
 
     plt.show()

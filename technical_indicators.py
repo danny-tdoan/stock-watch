@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def moving_average(x, n, type='simple'):
     """
     compute an n period moving average.
@@ -28,14 +29,14 @@ def relative_strength(prices, n=14):
     """
 
     deltas = np.diff(prices)
-    seed = deltas[:n+1]
-    up = seed[seed >= 0].sum()/n
-    down = -seed[seed < 0].sum()/n
-    if down==0:
-        down=0.001
-    rs = up/down
+    seed = deltas[:n + 1]
+    up = seed[seed >= 0].sum() / n
+    down = -seed[seed < 0].sum() / n
+    if down == 0:
+        down = 0.001
+    rs = up / down
     rsi = np.zeros_like(prices)
-    rsi[:n] = 100. - 100./(1. + rs)
+    rsi[:n] = 100. - 100. / (1. + rs)
 
     for i in range(n, len(prices)):
         delta = deltas[i - 1]  # cause the diff is 1 shorter
@@ -47,11 +48,11 @@ def relative_strength(prices, n=14):
             upval = 0.
             downval = -delta
 
-        up = (up*(n - 1) + upval)/n
-        down = (down*(n - 1) + downval)/n
+        up = (up * (n - 1) + upval) / n
+        down = (down * (n - 1) + downval) / n
 
-        rs = up/down
-        rsi[i] = 100. - 100./(1. + rs)
+        rs = up / down
+        rsi[i] = 100. - 100. / (1. + rs)
 
     return rsi
 
@@ -65,7 +66,12 @@ def moving_average_convergence(x, nslow=26, nfast=12):
     emafast = moving_average(x, nfast, type='exponential')
     return emaslow, emafast, emafast - emaslow
 
-def psar(barsdata, iaf = 0.02, maxaf = 0.2):
+
+def psar(barsdata, iaf=0.02, maxaf=0.2):
+    """Parabolic stop and reverse to identify when the stock reverses its trend
+    https://www.investopedia.com/terms/p/parabolicindicator.asp
+    """
+
     length = len(barsdata)
     dates = list(barsdata['date'])
     high = list(barsdata['high'])
@@ -79,7 +85,7 @@ def psar(barsdata, iaf = 0.02, maxaf = 0.2):
     ep = low[0]
     hp = high[0]
     lp = low[0]
-    for i in range(2,length):
+    for i in range(2, length):
         if bull:
             psar[i] = psar[i - 1] + af * (hp - psar[i - 1])
         else:
@@ -120,4 +126,5 @@ def psar(barsdata, iaf = 0.02, maxaf = 0.2):
             psarbull[i] = psar[i]
         else:
             psarbear[i] = psar[i]
-    return {"dates":dates, "high":high, "low":low, "close":close, "psar":psar, "psarbear":psarbear, "psarbull":psarbull}
+    return {"dates": dates, "high": high, "low": low, "close": close, "psar": psar, "psarbear": psarbear,
+            "psarbull": psarbull}

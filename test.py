@@ -1,7 +1,8 @@
 import datetime
 import numpy as np
 import matplotlib.colors as colors
-import matplotlib.finance as finance
+#import matplotlib.finance as finance
+import mpl_finance as finance
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 import matplotlib.mlab as mlab
@@ -9,44 +10,40 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
 import technical_indicators as ti
 
-startdate=datetime.date(2014,1,1)
-today=enddate=datetime.date.today()
-ticker='BHP.AX'
+startdate = datetime.date(2014, 1, 1)
+today = enddate = datetime.date.today()
+ticker = 'BHP.AX'
 
-fh=finance.fetch_historical_yahoo(ticker,startdate,enddate)
+fh = finance.fetch_historical_yahoo(ticker, startdate, enddate)
 
-#fhWrite=open('data/file.txt','w')
+# fhWrite=open('data/file.txt','w')
 
-r=mlab.csv2rec(fh)
+r = mlab.csv2rec(fh)
 fh.close()
 r.sort()
 
-res=ti.psar(r)
+res = ti.psar(r)
 
-#fhWrite.write(r)
-#fhWrite.close()
+plt.rc('axes', grid=True)
+plt.rc('grid', color='0.75', linestyle='-', linewidth=0.5)
 
+textsize = 9
+left, width = 0.1, 0.8
+rect1 = [left, 0.7, width, 0.2]
+rect2 = [left, 0.3, width, 0.4]
+rect3 = [left, 0.1, width, 0.2]
 
-plt.rc('axes',grid=True)
-plt.rc('grid',color='0.75',linestyle='-',linewidth=0.5)
+fig = plt.figure(facecolor='white')
+axescolor = '#f6f6f6'
 
-textsize=9
-left,width=0.1,0.8
-rect1=[left,0.7,width,0.2]
-rect2=[left,0.3,width,0.4]
-rect3=[left,0.1,width,0.2]
+ax1 = fig.add_axes(rect1, axisbg=axescolor)
+ax2 = fig.add_axes(rect2, axisbg=axescolor, sharex=ax1)
+ax2t = ax2.twinx()
+ax3 = fig.add_axes(rect3, axisbg=axescolor, sharex=ax1)
 
-fig=plt.figure(facecolor='white')
-axescolor='#f6f6f6'
-
-ax1=fig.add_axes(rect1,axisbg=axescolor)
-ax2=fig.add_axes(rect2,axisbg=axescolor,sharex=ax1)
-ax2t=ax2.twinx()
-ax3=fig.add_axes(rect3,axisbg=axescolor,sharex=ax1)
-
-prices=r.adj_close
-rsi=ti.relative_strength(prices)
-fillcolor='darkgoldenrod'
+prices = r.adj_close
+rsi = ti.relative_strength(prices)
+fillcolor = 'darkgoldenrod'
 
 ax1.plot(r.date, rsi, color=fillcolor)
 ax1.axhline(70, color=fillcolor)
@@ -81,7 +78,7 @@ s = '%s O:%1.2f H:%1.2f L:%1.2f C:%1.2f, V:%1.1fM Chg:%+1.2f' % (
     today.strftime('%d-%b-%Y'),
     last.open, last.high,
     last.low, last.close,
-    last.volume*1e-6,
+    last.volume * 1e-6,
     last.close - last.open)
 t4 = ax2.text(0.3, 0.9, s, transform=ax2.transAxes, fontsize=textsize)
 
@@ -89,13 +86,11 @@ props = font_manager.FontProperties(size=10)
 leg = ax2.legend(loc='center left', shadow=True, fancybox=True, prop=props)
 leg.get_frame().set_alpha(0.5)
 
-
-volume = (r.close*r.volume)/1e6  # dollar volume in millions
+volume = (r.close * r.volume) / 1e6  # dollar volume in millions
 vmax = volume.max()
 poly = ax2t.fill_between(r.date, volume, 0, label='Volume', facecolor=fillcolor, edgecolor=fillcolor)
-ax2t.set_ylim(0, 5*vmax)
+ax2t.set_ylim(0, 5 * vmax)
 ax2t.set_yticks([])
-
 
 # compute the MACD indicator
 fillcolor = 'darkslategrey'
@@ -108,11 +103,10 @@ ax3.plot(r.date, macd, color='black', lw=2)
 ax3.plot(r.date, ema9, color='blue', lw=1)
 ax3.fill_between(r.date, macd - ema9, 0, alpha=0.5, facecolor=fillcolor, edgecolor=fillcolor)
 
-
 ax3.text(0.025, 0.95, 'MACD (%d, %d, %d)' % (nfast, nslow, nema), va='top',
          transform=ax3.transAxes, fontsize=textsize)
 
-#ax3.set_yticks([])
+# ax3.set_yticks([])
 # turn off upper axis tick labels, rotate the lower ones, etc
 for ax in ax1, ax2, ax2t, ax3:
     if ax != ax3:
@@ -133,13 +127,14 @@ class MyLocator(mticker.MaxNLocator):
     def __call__(self, *args, **kwargs):
         return mticker.MaxNLocator.__call__(self, *args, **kwargs)
 
+
 # at most 5 ticks, pruning the upper and lower so they don't overlap
 # with other ticks
-#ax2.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
-#ax3.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
+# ax2.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
+# ax3.yaxis.set_major_locator(mticker.MaxNLocator(5, prune='both'))
 
 ax2.yaxis.set_major_locator(MyLocator(5, prune='both'))
 ax3.yaxis.set_major_locator(MyLocator(5, prune='both'))
 
-
 plt.show()
+
